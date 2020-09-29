@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="sketch.js"></script>
+
+  </head>
+  <body oncontextmenu="return false;">
+    <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+    <hr>
+    <div class="content">
+      <h1 class="center title link"><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">GAME OF LIFE</a></h1>
+      <p class="center instructions">The rules are simple..</p>
+
+      <div class="center">
+        <ol class="left">
+          <li>Any live cell with fewer than two live neighbors dies, as if by underpopulation.</li>
+          <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+          <li>Any live cell with more than three live neighbors dies, as if by overpopulation.</li>
+          <li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+        </ol>
+      </div>
+
+      <p class="center">Left click to place cells, right click to remove cells.</p>
+      <div class="btn-group">
+        <button id="start" onclick="runLife();">Start</button>
+        <button id="stop" onclick="stopLife();">Stop</button>
+        <button id="reset" onclick="clearGrid();">Reset</button>
+        <button id="random" onclick="randomizeGrid();">Randomize</button>
+      </div>
+      
+      <br><br>
+
+      <p class="center">Use these buttons below to spawn in interesting premade creations</p>
+      <div class="btn-group">
+        <button id="gosper" onclick="drawGosperGliderGun();">Spawn Gosper Glider Gun</button>
+        <button id="acorn" onclick="drawAcorn();">Spawn Acorn</button>
+      </div>     
+    </div>
+  </body>
+</html>
