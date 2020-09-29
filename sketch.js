@@ -166,4 +166,15 @@ function drawAcorn(){
     }
     updateGridGraphics();
 }
+
+function drawNoahsArc(){
+    clearGrid();
+    let x = [60,60,61,62,62,63,63,63,69,70,70,72,72,73,73,74];
+    let y = [140,142,139,140,143,142,143,144,131,130,132,130,133,132,133,133];
+
+    for (let i = 0; i < x.length; i++) {
+        grid[x[i]][y[i]] = 1;     
+    }
+    updateGridGraphics();
+}
    
